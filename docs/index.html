@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mnum</title>
+<link rel="icon" href="mnum-icon.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body id="mnum-body">
+
+	<!--
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	-->
+<style>
+.table-info {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	table-layout: fixed;
+}
+.css-input {
+	width: 700px;
+	font-size: 32px;
+	text-align: left;
+	border-radius: 8px;
+	border: 3px solid #c7bdbd;
+    /*border-color: #CCCCCC;
+    border-width: 2px;*/
+
+    padding: 5px;
+	background-image: linear-gradient(180deg, #F0F0F0, #F8F8F8, #F8F8F8, #FFFFFF);
+    box-shadow: 0px 0px 16px rgba(64, 64, 64, 0.125);
+}
+math {
+	font-size: 48px;
+}
+</style>
+<script src="wasm.js"></script>
+<script src="mnum.js"></script>
+<div id="maindiv" style="padding-top: 64px; text-align: center">
+
+	<img src="mnum-icon.png" alt="Mnum" style="vertical-align:middle; width: 64px; height: 64px;">
+	<h2>Math expression:</h2>
+
+	<p>
+		<input type="text" placeholder="(3+x)*(4+y)" id="mnum-input" name="input" value="" class="css-input" autofocus>
+	</p>
+	<p id="mnum-error" style="color: red"> </p>
+	<span>
+		Number base:
+	</span>
+	<select name="base" id="mnum-radix">
+		<option value="auto">auto</option>
+		<option value="2">2</option>
+		<option value="8">8</option>
+		<option value="10">10</option>
+		<option value="16">16</option>
+	</select>
+
+	<div id="mnum-math-output"></div>
+
+	<p>
+	<textarea placeholder="" id="mnum-output" name="output" style="width: 700px; height: 30px; font-size:24px; text-align: left; resize: vertical; border-radius: 4px"></textarea>
+	</p>
+
+	<h2>ℹ️ about</h2>
+	<div id="mnum-info">
+	<p>This is a work in progress <a href="https://en.wikipedia.org/wiki/Computer_algebra_system">Computer algebra system</a>.</p>
+
+	<h3>Numbers</h3>
+	<table class="table-info">
+		<tr><td>302, 10.2           </td><td>decimal           </td></tr>
+		<tr><td>0x8035     0x1F.80  </td><td>hexadecimal       </td></tr>
+		<tr><td>0o777               </td><td>octal             </td></tr>
+		<tr><td>0b1101              </td><td>binary            </td></tr>
+		<tr><td>0.3... 0.36...      </td><td>repeating decimals (1/3, 4/11)</td></tr>
+	</table>
+
+	<h3>Functions</h3>
+	<table class="table-info">
+		<tr><td>abs, sign                </td><td>absolute value, signum of number                </td></tr>
+		<tr><td>ln, log, log2, log10     </td><td>logarithm functions                             </td></tr>
+		<tr><td>sqrt, cbrt               </td><td>square root, cube root                          </td></tr>
+		<tr><td>sin, cos, tan            </td><td>trigonometric functions                         </td></tr>
+		<tr><td>asin, acos, atan, atan2  </td><td>inverse trigonometric functions                 </td></tr>
+		<tr><td>csc, sec, cot            </td><td>reciprocal trigonometric functions              </td></tr>
+		<tr><td>sinh, cosh, tanh         </td><td>hyperbolic trigonometric functions              </td></tr>
+		<tr><td>round, trunc, floor, ceil</td><td>rounding functions                              </td></tr>
+		<tr><td>derivative(x, y)         </td><td>derivative of x with respect to y               </td></tr>
+		<tr><td>integral(x, y)           </td><td>indefinite integral of x with respect to y      </td></tr>
+		<tr><td>gcd, lcm                 </td><td>greatest common divisor, least common multiple  </td></tr>
+		<tr><td>npr, ncr                 </td><td>permutations, combinations                      </td></tr>
+		<tr><td>re, im                   </td><td>complex real and imaginary part                 </td></tr>
+	</table>
+
+	<h3>Constants</h3>
+	<table class="table-info">
+		<tr><td>e              </td><td>euler's number      </td></tr>
+		<tr><td>pi, tau        </td><td>circle constants    </td></tr>
+		<tr><td>i              </td><td>imaginary unit      </td></tr>
+		<tr><td>oo, inf        </td><td>infinity            </td></tr>
+	</table>
+
+	<h3>Operators</h3>
+	<table class="table-info">
+		<tr><td>+ - * /     </td><td>addition, subtraction, multiplication, division </td></tr>
+		<tr><td>^ **        </td><td>exponentiation                                  </td></tr>
+		<tr><td>%  !        </td><td>modulo, factorial                               </td></tr>
+	</table>
+	</div>
+
+</div>
+</body>
+</html>

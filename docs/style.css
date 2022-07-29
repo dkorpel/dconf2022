@@ -1,0 +1,39 @@
+canvas {
+	/* FIXME: non-zero border introduces offset in cursor position*/
+	border: 0px solid #202020;
+	background-color: hsl(0, 0%, 0%);
+	display: inline;
+}
+body {
+	font-family: "Helvetica", "Segoe UI", "Verdana", "Arial";
+	background-image: linear-gradient(white, #f1edea);
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+h1 {
+	color: #c01616;
+	text-shadow: 2px 2px #461a1a;
+	font-style: normal;
+	font-size: 32px;
+}
+h2 {
+	color: #131113;
+	font-style: bold;
+	font-size: 24px;
+}
+h3 {
+	color: #131113;
+	font-style: bold;
+	font-size: 20px;
+}
+p {
+	color: #131113;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1.1;
+}
+div {
+	padding: 0;
+}

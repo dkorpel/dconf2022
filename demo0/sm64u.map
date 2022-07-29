@@ -1,0 +1,40 @@
+drawStringFormat = 0x2D62D8 // print_text_fmt_int
+globalTimer = 0x32D5D4
+controller = 0x32D5E4
+marioPtr = 0x32D93C
+mario = 0x33B170
+currObj = 0x361160
+marioObj = 0x361158
+rngSeed = 0x38EEE0
+objArr = 0x33D488
+memcpy = 0x3273F0
+renderObject = 0x27D6FC
+processObject = 0x385C00
+playMusic = 0x320544
+spawnObjectAtParent = 0x29EDCC
+setAnimation = 0x2509B8
+structWithGfxRoot = 0x32DDCC //J: 0x32CE6C, pointer at offset 0x04
+timeStop = 0x33D480
+sinTable = 0x386000
+cosTable = 0x387000
+camera = 0x33C618
+printGenericText = 0x2D77DC
+printCreditsString = 0x2DAA34
+asciiToSm64 = 0x2DA964
+
+randomU16 = 0x383BB0
+
+allocDisplayList = 0x278F2C
+geoAppendDisplayList = 0x27B904 // J: 0x27B354
+mtxf_to_mtx = 0x37A434
+mtxf_mul = 0x379F60
+
+gMatStackIndex = 0x33BAE0;
+gMatStack = 0x33BAE8;
+gMatStackFixed = 0x33C2E8;
+
+transitionShrinking = 0x33B254
+transitionType = 0x33BAB0
+transitionProgress = 0x330EC0
+
+gShowDebugText = 0x32D598
