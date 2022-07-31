@@ -10,7 +10,7 @@ function toJsString(ptr, len) {
 }
 
 /// Send strings from JS to webassembly
-function wasmSendString(str, type) {
+function wasmSendString(str) {
 	const bytes = new TextEncoder().encode(str) // Encode in utf-8
 	// Copy the string into memory allocated in the WebAssembly
 	const ptr = wasmInstance.exports.getStringMessageBuffer()
@@ -21,7 +21,7 @@ function wasmSendString(str, type) {
 	const buffer = new Uint8Array(wasmInstance.exports.memory.buffer, ptr, bytes.byteLength + 1) // '0' terminator
 	buffer.set(bytes)
 	buffer[bytes.byteLength] = 0; // while Uint8Array is initialized to 0, don't rely on that
-	wasmInstance.exports.receiveStringMessage(buffer.byteOffset, bytes.byteLength + 1, type)
+	wasmInstance.exports.receiveStringMessage(buffer.byteOffset, bytes.byteLength + 1)
 	return buffer
 }
 

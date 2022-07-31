@@ -7,8 +7,6 @@ See_Also: https://github.com/adamdruppe/webassembly
 */
 module wasm.mem;
 
-import dbg;
-
 @nogc nothrow @safe:
 extern(C):
 
