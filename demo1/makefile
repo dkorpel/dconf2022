@@ -8,3 +8,5 @@ wasm:
 .PHONY: clean
 clean:
 	rm -f demo.wasm demo.o
+
+# python -m http.server
