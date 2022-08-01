@@ -5,6 +5,12 @@ Defines types, names and addresses for the game's memory
 */
 module n64.sm64h;
 
+//0x2A = x, 0x2B = coin, 0x2C = mario, 0x2D = star
+enum STR_COIN = "\x2B";
+enum STR_MARIO = "\x2C";
+enum STR_STAR = "\x2D";
+enum STR_X = "\x2A";
+
 /// Address of a symbol for the US version
 struct US {
 	uint address;

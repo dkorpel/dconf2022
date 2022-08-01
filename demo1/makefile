@@ -1,6 +1,6 @@
 
 .PHONY: wasm
-mnum-wasm:
+wasm:
 	ldc2 -i -mtriple=wasm32-unknown-unknown-wasm -L-allow-undefined wasm/object.d \
 	demo.d \
 	-of=demo.wasm
